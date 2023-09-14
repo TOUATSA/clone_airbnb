@@ -1,0 +1,142 @@
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 1em auto;
+  align-items: center;
+}
+
+#navbar ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+#navbar .search {
+  border: 1px solid rgb(184, 180, 180);
+  border-radius: 3em;
+  padding: 10px 1.3em;
+}
+
+#navbar .search li {
+  padding: .5em;
+  border-right: 1px solid black;
+  color: black;
+}
+
+#navbar .search li:last-child {
+  padding: 0%!important;
+  border-right: none!important;
+}
+
+#navbar .search li:nth-child(3) {
+  border-right: none!important;
+  color: gainsboro!important;
+}
+
+
+#navbar .search2 {
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+#navbar .search2 li {
+  padding: 1em;
+  color: black;
+}
+
+#navbar .search2 li a {
+  color: rgb(15, 15, 15);
+}
+
+#navbar .more_info li a {
+padding: .5em;
+}
+
+#navbar .more_info li a:hover {
+  background-color: rgb(243, 239, 239);
+  border-radius: .5em;
+}
+
+.profil_user {
+
+  border: 1px solid rgb(156, 153, 153);
+  width: max-content;
+  border-radius: 1em;
+  position: absolute;
+  right: 6em;
+  top: 5em;
+  background-color: whitesmoke;
+
+}
+
+.profil_user li {
+  padding: .5em;
+  margin-bottom: 7px;
+}
+
+.profil_user li:first-child, .profil_user li:nth-child(2) {
+  margin-top: 10px;
+}
+
+.profil_user li:hover {
+background-color: #e4e0e0;
+}
+
+.langue_devise {
+    background-color: rgb(240, 236, 236);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: .9;
+}
+
+.langue_devise>div {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2em;
+width: 80%;
+margin: 10% auto;
+}
+
+.langue_devise>div .btn_control_choice span {
+  padding: .5em;
+  display: inline-block;
+ margin-bottom: 10px;
+ margin-right: 1em;
+}
+
+.langue_devise>div .btn_control_choice span:hover {
+ background-color: grey;
+ border-radius: 10px;
+}
+
+.langue_devise>div>div h3 {
+  margin: 1.5em 0;
+  }
+
+.langue_devise>div>div div:first-child ul {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+row-gap: 1em;
+column-gap: 1em;
+}
+
+.langue_devise>div>div div:first-child ul li {
+  padding: .5em;
+}
+
+.langue_devise>div>div div:first-child ul li span {
+  display: block;
+  }
+
+  .langue_devise>div>div div:first-child ul li:hover  {
+  background-color: rgb(202, 200, 200);
+  border-radius: 10px;
+}
+
+  .langue_devise>div>div div:first-child ul li span:last-child {
+color: gray;    }

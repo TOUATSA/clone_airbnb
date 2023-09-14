@@ -1,0 +1,132 @@
+
+.foot {
+  background-color: #F7F7F7;
+}
+
+.foot1>div {
+  width: 95%;
+  margin: auto;
+}
+
+.foot1>ul {
+  display: flex;
+  justify-content: left;
+  margin: auto;
+  width: 95%;
+}
+
+.foot1>ul li {
+  padding: 1em 0;
+}
+
+.foot1>ul li a {
+  color: rgb(99, 97, 97);
+  padding: 1em 0;
+  font-weight: bold;
+}
+
+.foot1 #onglet3 ul, .foot1 #onglet4 ul, .foot1 #onglet6 ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.foot1 #onglet3 ul li , .foot1 #onglet4 ul li , .foot1 #onglet6 ul li {
+  margin-top: 1.5em;
+}
+
+.foot1 #onglet3 ul li span:last-child, .foot1 #onglet4 ul li span:last-child, .foot1 #onglet6 ul li span:last-child{
+  color: gray;
+  margin-top: 1.5em;
+}
+
+.foot1 #onglet3 ul li span:first-child, .foot1 #onglet4 ul li span:first-child, .foot1 #onglet6 ul li span:first-child{
+  color: black;
+  display: block;
+  font-weight: bold;
+}
+
+.foot1 #onglet5 ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.foot1 #onglet5 ul li {
+  color: black;
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+.foot1 #onglet5 ul li a {
+  color: black;
+  font-weight: bold;
+}
+
+.foot1>ul li {
+  margin-right: 1em;
+}
+
+.foot2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+  margin: 3em auto;
+  width: 95%;
+}
+
+.foot .foot2 ul li {
+  font-size: 1.2em;
+  margin: 0.5em;
+  color: gray;
+}
+
+.foot .foot2 ul li:first-child {
+  font-weight: bold;color: black;
+}
+
+.foot .foot2 ul li a {
+  color: #333333;
+}
+
+.foot .foot2 ul li a:hover, .foot3 div ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.foot3 {
+    width: 95%;
+    margin: auto;
+}
+
+.foot3 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.foot3 div ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot3 div ul a, .foot3 div ul li:first-child{
+  display: block;
+  margin-right: 1em;
+  color: #333333;
+}
+
+.foot3 div ul:last-child a, .foot3 div ul:last-child li:first-child{
+  display: block;
+  margin-right: 1em;
+  color: #333333;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+}

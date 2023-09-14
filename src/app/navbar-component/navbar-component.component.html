@@ -1,0 +1,303 @@
+
+<div>
+
+  <div id="navbar" >
+    <h2>airbnb</h2>
+
+    <div>
+      <ul class="search" *ngIf="visibilityFirstList" >
+        <li><a href="/" style="color: rgb(56, 54, 54); font-weight: bold;" (click)="viewSecondInternalListe( 'location' )" >N'importe ou </a></li>
+        <li><a href="/" style="color: rgb(56, 54, 54); font-weight: bold;" (click)="viewSecondInternalListe( 'during' )" >Une semaine</a></li>
+        <li><a href="/" style="color: rgb(182, 179, 179); font-weight: bold;" (click)="viewSecondInternalListe('add_worker')" >Ajouter des voyageurs</a></li>
+        <li><a href="/" (click)="runSearchApparts()" >logo</a></li>
+      </ul>
+
+      <ul *ngIf="visibilitySecondList" class="search2" >
+        <li><a href="">Logements</a></li>
+        <li><a href="">Experiences</a></li>
+        <li><a href="">Experiences en ligne</a></li>
+      </ul>
+    </div>
+
+    <ul class="more_info" >
+      <li><a href="/place/logement" style="color: black;" >Placer son logement sur airbnb </a></li>
+      <li><a href=""  (click)="viewBoxLanguageAndDevice()" >logo globe</a></li>
+      <li><a href="">logo profil</a></li>
+    </ul>
+</div>
+
+<div class="langue_devise" (click)="masquerPanelLangue()" *ngIf="visibilityLangueDevise" >
+  <!--
+     *ngIf="!viewBoxLanguageAndDevice"
+  -->
+
+  <div>
+    <p style="font-weight: bold;" (click)="masquerPanelLangue()" >X</p> <br><br>
+
+    <p class="btn_control_choice" >
+          <span (click)="clickForChoiceBetweenDeviseOrLanguage('langue')" >Langue et Region</span>
+          <span (click)="clickForChoiceBetweenDeviseOrLanguage('devise')" >Devise</span>
+    </p>
+
+    <hr>
+
+    <div>
+          <div *ngIf="visibilityAloneLangue" >
+            <h3>Choicissez une devise</h3>
+            <ul>
+                <li><span>Euro</span><span>EUR – €</span></li>
+                <li><span>Baht thaïlandais</span><span>THB – ฿</span></li>
+                <li><span>Colon costaricain</span><span>CRC – ₡</span></li>
+                <li><span>Dollar américain</span><span>USD – $</span></li>
+                <li><span>Dirham émirien</span><span>AED – ﺩ.ﺇ</span></li>
+                <li><span>Dirham marocain</span><span>MAD</span></li>
+                <li><span>Couronne tchèque</span><span>CZK – Kč</span></li>
+                <li><span>Dollar néo-zélandais</span><span>NZD – $</span></li>
+                <li><span>Forint hongrois</span><span>HUF – Ft</span></li>
+                <li><span>Dollar de Singapour</span><span>SGD – $</span></li>
+                <li><span>Dollar de Hong Kong</span><span>HKD – $</span></li>
+                <li><span>Dollar canadien</span><span>CAD – $</span></li>
+                <li><span>Dollar australien</span><span>AUD – $</span></li>
+                <li><span>Livre turque</span><span>TRY – ₺</span></li>
+                <li><span>Livre sterling</span><span>GBP – £</span></li>
+                <li><span>Lev bulgare</span><span>BGN – лв.</span></li>
+                <li><span>Leu roumain</span><span>RON – lei</span></li>
+                <li><span>Kuna croate</span><span>HRK – kn</span></li>
+                <li><span>Franc suisse</span><span>CHF</span></li>
+                <li><span>Peso philippin</span><span>PHP - P</span></li>
+                <li><span>Peso mexicain</span><span>MXN – $</span></li>
+                <li><span>Peso colombien</span><span>COP – $</span></li>
+                <li><span>Peso chilien</span><span>CLP – $</span></li>
+                <li><span>Nouveau dollar de Taïwan</span><span>TWD – $</span></li>
+                <li><span>Nouveau Shekel israélien</span><span>ILS – ₪</span></li>
+                <li><span>Ringgit malais</span><span>MYR – RM</span></li>
+                <li><span> Real brésilien</span><span>BRL – R$</span></li>
+                <li><span>Rand sud-africain</span><span>ZAR – R</span></li>
+                <li><span>Peso uruguayen</span><span>UYU – $U</span></li>
+                <li><span>Sol péruvien</span><span>PEN – S/</span></li>
+                <li><span>Roupie indonésienne</span><span>IDR – Rp</span></li>
+                <li><span>Roupie indienne</span><span>INR – ₹</span></li>
+                <li><span>Riyal saoudien</span><span>SAR – SR</span></li>
+                <li><span>Yuan chinois</span><span>CNY – ￥</span></li>
+                <li><span>Yen japonais</span><span>JPY – ¥</span></li>
+                <li><span>Won sud-coréen</span><span>KRW – ₩</span></li>
+                <li><span>Zloty polonais</span><span>PLN – zł</span></li>
+            </ul>
+          </div>
+
+          <div *ngIf="!visibilityAloneLangue" >
+                <div>
+                  <br><br>
+                    <h2>Langues et régions suggérées</h2>
+
+                    <br><br>
+                    <ul>
+                      <li><span>English</span><span>United States</span></li>
+                      <li><span>English</span><span>United Kingdom</span></li>
+                    </ul>
+
+                    <br><br><br>
+                </div>
+
+                <div>
+                      <h2>Choisissez une langue et une région</h2>
+
+                      <ul>
+                       <li><a href=""><span>English</span><span>United Kingdom</span></a></li>
+                       <li><a href=""><span>Azərbaycan dili</span><span>Azərbaycan</span></a></li>
+                       <li><a href=""><span>Bahasa Indonesia</span><span>Indonesia</span></a></li>
+                       <li><a href=""><span>Bosanski</span><span>Bosna i Hercegovina</span></a></li>
+                       <li><a href=""><span>Català</span><span>Espanya</span></a></li>
+                       <li><a href=""><span>Čeština</span><span>Česká republika</span></a></li>
+                       <li><a href=""><span>Crnogorski</span><span>Crna Gora</span></a></li>
+                       <li><a href=""><span>Dansk</span><span>Danmark</span></a></li>
+                       <li><a href=""><span>Deutsch</span><span>Deutschland</span></a></li>
+                       <li><a href=""><span>Deutsch</span><span>Österreich</span></a></li>
+                       <li><a href=""><span>Deutsch</span><span>Schweiz</span></a></li>
+                       <li><a href=""><span>Deutsch</span><span>Luxemburg</span></a></li>
+                       <li><a href=""><span>Eesti</span><span>Eesti</span></a></li>
+                       <li><a href=""><span>English</span><span>Australia</span></a></li>
+                       <li><a href=""><span>English</span><span>Canada</span></a></li>
+                       <li><a href=""><span>English</span><span>Guyana</span></a></li>
+                       <li><a href=""><span>English</span><span>India</span></a></li>
+                       <li><a href=""><span>English</span><span>Ireland</span></a></li>
+                       <li><a href=""><span>English</span><span>New Zealand</span></a></li>
+                       <li><a href=""><span>English</span><span>Singapore</span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span></span><span></span></a></li>
+                       <li><a href=""><span>한국어</span><span>대한민국</span></a></li>
+                       <li><a href=""><span>العربية</span><span>العالم</span></a></li>
+                       <li><a href=""><span>עברית</span><span>ישראל</span></a></li>
+                       <li><a href=""><span>Հայերեն</span><span>Հայաստան</span></a></li>
+                       <li><a href=""><span>ქართული</span><span>საქართველო</span></a></li>
+                       <li><a href=""><span>日本語</span><span>日本</span></a></li>
+                       <li><a href="">हिन्दी<span></span><span>भारत</span></a></li>
+                       <li><a href=""><span>ไทย</span><span>ประเทศไทย</span></a></li>
+                       <li><a href=""><span>简体中文</span><span>美国</span></a></li>
+                       <li><a href=""><span>繁體中文</span><span>美國</span></a></li>
+                       <li><a href=""><span>香港</span><span>繁體中文</span></a></li>
+                       <li><a href=""><span>中国</span><span>繁體中文</span></a></li>
+
+
+
+
+                      </ul>
+
+
+English
+United Arab Emirates
+Español
+Argentina
+Español
+Belice
+Español
+Bolivia
+Español
+Chile
+Español
+Colombia
+Español
+Costa Rica
+Español
+Ecuador
+Español
+El Salvador
+Español
+España
+Español
+Estados Unidos
+Español
+Guatemala
+Español
+Honduras
+Español
+Latinoamérica
+Español
+México
+Español
+Nicaragua
+Español
+Panamá
+Español
+Paraguay
+Español
+Perú
+Español
+Venezuela
+Français
+Belgique
+Français
+Canada
+Français
+Suisse
+Français
+Luxembourg
+Gaeilge
+Éire
+Hrvatski
+Hrvatska
+isiXhosa
+eMzantsi Afrika
+isiZulu
+iNingizimu Afrika
+Íslenska
+Ísland
+Italiano
+Italia
+Italiano
+Svizzera
+Kiswahili
+Āfrika
+Latviešu
+Latvija
+Lietuvių
+Lietuva
+Magyar
+Magyarország
+Malti
+Malta
+Melayu
+Malaysia
+Nederlands
+België
+Nederlands
+Nederland
+Norsk
+Norge
+Polski
+Polska
+Português
+Brasil
+Português
+Portugal
+Română
+România
+Shqip
+Shqipëri
+Slovenčina
+Slovensko
+Slovenščina
+Slovenija
+Srpski
+Srbija
+Suomi
+Suomi
+Svenska
+Sverige
+Tagalog
+Pilipinas
+Tiếng Việt
+Việt Nam
+Türkçe
+Türkiye
+Ελληνικά
+Ελλάδα
+Български
+България
+Македонски
+Северна Македонија
+Русский
+Россия
+Українська
+Україна
+
+
+
+
+
+                </div>
+
+          </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ul class="profil_user" *ngIf="visibilityListConnect" >
+  <li><a href="/sign_in">Inscription</a></li>
+  <li><a href="/connect">Connexion</a></li>
+  <hr>
+  <li><a href="/place/logement" style="color: black;" >Placer son logement sur airbnb </a></li>
+  <li><a href="/help">Centre d'aide</a></li>
+</ul>
+
+<hr>
+
+<app-choice-type-properties-bar></app-choice-type-properties-bar>
+
+</div>
+<!--
+  *ngIf="!visibilityListConnect"
+-->
