@@ -1,0 +1,11 @@
+
+div table {
+  width: 85%;
+  margin: auto;
+  padding: 1em;
+  border: 2px solid red;
+}
+
+div table  {
+  border-collapse: 2em;
+}

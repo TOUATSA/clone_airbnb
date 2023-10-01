@@ -112,3 +112,11 @@ font-size: 1.2em;
 .type_property {
   margin-left: 1.5em;
 }
+
+.type_property>ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2em;
+  width: 95%;
+}

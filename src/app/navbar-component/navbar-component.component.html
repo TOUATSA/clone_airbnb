@@ -9,7 +9,14 @@
         <li><a href="/" style="color: rgb(56, 54, 54); font-weight: bold;" (click)="viewSecondInternalListe( 'location' )" >N'importe ou </a></li>
         <li><a href="/" style="color: rgb(56, 54, 54); font-weight: bold;" (click)="viewSecondInternalListe( 'during' )" >Une semaine</a></li>
         <li><a href="/" style="color: rgb(182, 179, 179); font-weight: bold;" (click)="viewSecondInternalListe('add_worker')" >Ajouter des voyageurs</a></li>
-        <li><a href="/" (click)="runSearchApparts()" >logo</a></li>
+        <li><a href="/" (click)="runSearchApparts()" >logo</a>  </li>
+        <li> <span class="material-icons-outlined">
+    search
+    </span> </li>
+
+    <li> <span class="material-icons-outlined">
+fingerprint
+</span> </li>
       </ul>
 
       <ul *ngIf="visibilitySecondList" class="search2" >
@@ -290,14 +297,15 @@ Türkiye
   <li><a href="/connect">Connexion</a></li>
   <hr>
   <li><a href="/place/logement" style="color: black;" >Placer son logement sur airbnb </a></li>
-  <li><a href="/help">Centre d'aide</a></li>
+  <li><a href="/help">Centre d'aide</a> </li>
 </ul>
 
 <hr>
 
-<app-choice-type-properties-bar></app-choice-type-properties-bar>
 
 </div>
 <!--
   *ngIf="!visibilityListConnect"
+  <app-choice-type-properties-bar></app-choice-type-properties-bar>
+
 -->

@@ -29,7 +29,7 @@ viewOngletMatcheBis(arg0: Object) {
   public visibilityOngletActivite :boolean = false;
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
 
   viewOngletMatche( ongletName : String ) {

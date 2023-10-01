@@ -1,0 +1,51 @@
+
+<div>
+  <form novalidate [formGroup]="apartment" (ngSubmit)="saveApartment()" >
+
+    <table>
+      <tr>
+        <td><label for="">NOM ET PRENOM : </label></td>
+        <td><input type="text" formControlName="nom_prenom" required ></td>
+      </tr>
+      <tr>
+        <td><label for="">DATE ET LIEU NAISSANCE  :  </label></td>
+        <td><input type="text" formControlName="naissance" required ></td>
+      </tr>
+      <tr>
+        <td><label for="">NUMERO DE TELEPHONE  :  </label></td>
+        <td><input type="text" formControlName="telephone" ></td>
+      </tr>
+      <tr>
+        <td><label for="">SEXE  :  </label></td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td><label for="">DESCRIPTION  :  </label></td>
+        <td><input type="text" formControlName="description" ></td>
+      </tr>
+      <tr>
+        <td><label for="">PROFESSION  :  </label></td>
+        <select formControlName="profession" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </tr>
+
+      <tr>
+        <td> <button type="submit">SAVE APARTMENT</button> </td>
+        <td><button type="button">ANNULER</button></td>
+      </tr>
+    </table>
+
+    <div formArrayName="tags" >
+      <div *ngFor="let tag of tags.controls; let i=index " >
+        <label for="" [attr.for]="i"></label>
+        <input type="text" [id]="i" >
+      </div>
+    </div>
+
+  </form>
+</div>

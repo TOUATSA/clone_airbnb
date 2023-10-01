@@ -8,6 +8,9 @@ import { NavbarComponentComponent } from './navbar-component/navbar-component.co
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ChoiceTypePropertiesBarComponent } from './choice-type-properties-bar/choice-type-properties-bar.component';
 import { CardOfPicturePropertiesComponent } from './card-of-picture-properties/card-of-picture-properties.component';
+import { AddAppartmentComponent } from './add-appartment/add-appartment.component';
+import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { CardOfPicturePropertiesComponent } from './card-of-picture-properties/c
     NavbarComponentComponent,
     SearchbarComponent,
     ChoiceTypePropertiesBarComponent,
-    CardOfPicturePropertiesComponent
+    CardOfPicturePropertiesComponent,
+    AddAppartmentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
